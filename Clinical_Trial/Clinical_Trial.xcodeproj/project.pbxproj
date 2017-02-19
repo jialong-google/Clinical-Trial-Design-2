@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F647D34C1E56C5D000217F1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647D34B1E56C5D000217F1A /* AppDelegate.swift */; };
+		F647D34E1E56C5D000217F1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647D34D1E56C5D000217F1A /* ViewController.swift */; };
+		F647D3511E56C5D000217F1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F647D34F1E56C5D000217F1A /* Main.storyboard */; };
+		F647D3531E56C5D000217F1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F647D3521E56C5D000217F1A /* Assets.xcassets */; };
+		F647D3561E56C5D000217F1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F647D3541E56C5D000217F1A /* LaunchScreen.storyboard */; };
+		F647D3611E56C5D000217F1A /* Clinical_TrialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647D3601E56C5D000217F1A /* Clinical_TrialTests.swift */; };
+		F647D36C1E56C5D000217F1A /* Clinical_TrialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647D36B1E56C5D000217F1A /* Clinical_TrialUITests.swift */; };
+		F647D37D1E56D12300217F1A /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647D37B1E56D12300217F1A /* PageViewController.swift */; };
+		F647D37E1E56D12300217F1A /* PageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F647D37C1E56D12300217F1A /* PageViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F647D35D1E56C5D000217F1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F647D3401E56C5D000217F1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F647D3471E56C5D000217F1A;
+			remoteInfo = Clinical_Trial;
+		};
+		F647D3681E56C5D000217F1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F647D3401E56C5D000217F1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F647D3471E56C5D000217F1A;
+			remoteInfo = Clinical_Trial;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F647D3481E56C5D000217F1A /* Clinical_Trial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clinical_Trial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F647D34B1E56C5D000217F1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F647D34D1E56C5D000217F1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F647D3501E56C5D000217F1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F647D3521E56C5D000217F1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F647D3551E56C5D000217F1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F647D3571E56C5D000217F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F647D35C1E56C5D000217F1A /* Clinical_TrialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Clinical_TrialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F647D3601E56C5D000217F1A /* Clinical_TrialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinical_TrialTests.swift; sourceTree = "<group>"; };
+		F647D3621E56C5D000217F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F647D3671E56C5D000217F1A /* Clinical_TrialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Clinical_TrialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F647D36B1E56C5D000217F1A /* Clinical_TrialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinical_TrialUITests.swift; sourceTree = "<group>"; };
+		F647D36D1E56C5D000217F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F647D37B1E56D12300217F1A /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		F647D37C1E56D12300217F1A /* PageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F647D3451E56C5D000217F1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F647D3591E56C5D000217F1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F647D3641E56C5D000217F1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F647D33F1E56C5D000217F1A = {
+			isa = PBXGroup;
+			children = (
+				F647D34A1E56C5D000217F1A /* Clinical_Trial */,
+				F647D35F1E56C5D000217F1A /* Clinical_TrialTests */,
+				F647D36A1E56C5D000217F1A /* Clinical_TrialUITests */,
+				F647D3491E56C5D000217F1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F647D3491E56C5D000217F1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F647D3481E56C5D000217F1A /* Clinical_Trial.app */,
+				F647D35C1E56C5D000217F1A /* Clinical_TrialTests.xctest */,
+				F647D3671E56C5D000217F1A /* Clinical_TrialUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F647D34A1E56C5D000217F1A /* Clinical_Trial */ = {
+			isa = PBXGroup;
+			children = (
+				F647D34B1E56C5D000217F1A /* AppDelegate.swift */,
+				F647D37B1E56D12300217F1A /* PageViewController.swift */,
+				F647D37C1E56D12300217F1A /* PageViewController.xib */,
+				F647D34D1E56C5D000217F1A /* ViewController.swift */,
+				F647D34F1E56C5D000217F1A /* Main.storyboard */,
+				F647D3521E56C5D000217F1A /* Assets.xcassets */,
+				F647D3541E56C5D000217F1A /* LaunchScreen.storyboard */,
+				F647D3571E56C5D000217F1A /* Info.plist */,
+			);
+			path = Clinical_Trial;
+			sourceTree = "<group>";
+		};
+		F647D35F1E56C5D000217F1A /* Clinical_TrialTests */ = {
+			isa = PBXGroup;
+			children = (
+				F647D3601E56C5D000217F1A /* Clinical_TrialTests.swift */,
+				F647D3621E56C5D000217F1A /* Info.plist */,
+			);
+			path = Clinical_TrialTests;
+			sourceTree = "<group>";
+		};
+		F647D36A1E56C5D000217F1A /* Clinical_TrialUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F647D36B1E56C5D000217F1A /* Clinical_TrialUITests.swift */,
+				F647D36D1E56C5D000217F1A /* Info.plist */,
+			);
+			path = Clinical_TrialUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F647D3471E56C5D000217F1A /* Clinical_Trial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F647D3701E56C5D000217F1A /* Build configuration list for PBXNativeTarget "Clinical_Trial" */;
+			buildPhases = (
+				F647D3441E56C5D000217F1A /* Sources */,
+				F647D3451E56C5D000217F1A /* Frameworks */,
+				F647D3461E56C5D000217F1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clinical_Trial;
+			productName = Clinical_Trial;
+			productReference = F647D3481E56C5D000217F1A /* Clinical_Trial.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F647D35B1E56C5D000217F1A /* Clinical_TrialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F647D3731E56C5D000217F1A /* Build configuration list for PBXNativeTarget "Clinical_TrialTests" */;
+			buildPhases = (
+				F647D3581E56C5D000217F1A /* Sources */,
+				F647D3591E56C5D000217F1A /* Frameworks */,
+				F647D35A1E56C5D000217F1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F647D35E1E56C5D000217F1A /* PBXTargetDependency */,
+			);
+			name = Clinical_TrialTests;
+			productName = Clinical_TrialTests;
+			productReference = F647D35C1E56C5D000217F1A /* Clinical_TrialTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F647D3661E56C5D000217F1A /* Clinical_TrialUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F647D3761E56C5D000217F1A /* Build configuration list for PBXNativeTarget "Clinical_TrialUITests" */;
+			buildPhases = (
+				F647D3631E56C5D000217F1A /* Sources */,
+				F647D3641E56C5D000217F1A /* Frameworks */,
+				F647D3651E56C5D000217F1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F647D3691E56C5D000217F1A /* PBXTargetDependency */,
+			);
+			name = Clinical_TrialUITests;
+			productName = Clinical_TrialUITests;
+			productReference = F647D3671E56C5D000217F1A /* Clinical_TrialUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F647D3401E56C5D000217F1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Jialong;
+				TargetAttributes = {
+					F647D3471E56C5D000217F1A = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					F647D35B1E56C5D000217F1A = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F647D3471E56C5D000217F1A;
+					};
+					F647D3661E56C5D000217F1A = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F647D3471E56C5D000217F1A;
+					};
+				};
+			};
+			buildConfigurationList = F647D3431E56C5D000217F1A /* Build configuration list for PBXProject "Clinical_Trial" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F647D33F1E56C5D000217F1A;
+			productRefGroup = F647D3491E56C5D000217F1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F647D3471E56C5D000217F1A /* Clinical_Trial */,
+				F647D35B1E56C5D000217F1A /* Clinical_TrialTests */,
+				F647D3661E56C5D000217F1A /* Clinical_TrialUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F647D3461E56C5D000217F1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F647D3561E56C5D000217F1A /* LaunchScreen.storyboard in Resources */,
+				F647D3531E56C5D000217F1A /* Assets.xcassets in Resources */,
+				F647D3511E56C5D000217F1A /* Main.storyboard in Resources */,
+				F647D37E1E56D12300217F1A /* PageViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F647D35A1E56C5D000217F1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F647D3651E56C5D000217F1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F647D3441E56C5D000217F1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F647D37D1E56D12300217F1A /* PageViewController.swift in Sources */,
+				F647D34E1E56C5D000217F1A /* ViewController.swift in Sources */,
+				F647D34C1E56C5D000217F1A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F647D3581E56C5D000217F1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F647D3611E56C5D000217F1A /* Clinical_TrialTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F647D3631E56C5D000217F1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F647D36C1E56C5D000217F1A /* Clinical_TrialUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F647D35E1E56C5D000217F1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F647D3471E56C5D000217F1A /* Clinical_Trial */;
+			targetProxy = F647D35D1E56C5D000217F1A /* PBXContainerItemProxy */;
+		};
+		F647D3691E56C5D000217F1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F647D3471E56C5D000217F1A /* Clinical_Trial */;
+			targetProxy = F647D3681E56C5D000217F1A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F647D34F1E56C5D000217F1A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F647D3501E56C5D000217F1A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F647D3541E56C5D000217F1A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F647D3551E56C5D000217F1A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F647D36E1E56C5D000217F1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F647D36F1E56C5D000217F1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F647D3711E56C5D000217F1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Clinical_Trial/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlos.Clinical-Trial";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F647D3721E56C5D000217F1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Clinical_Trial/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlos.Clinical-Trial";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F647D3741E56C5D000217F1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Clinical_TrialTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlos.Clinical-TrialTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clinical_Trial.app/Clinical_Trial";
+			};
+			name = Debug;
+		};
+		F647D3751E56C5D000217F1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Clinical_TrialTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlos.Clinical-TrialTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clinical_Trial.app/Clinical_Trial";
+			};
+			name = Release;
+		};
+		F647D3771E56C5D000217F1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = Clinical_TrialUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlos.Clinical-TrialUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Clinical_Trial;
+			};
+			name = Debug;
+		};
+		F647D3781E56C5D000217F1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = Clinical_TrialUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carlos.Clinical-TrialUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Clinical_Trial;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F647D3431E56C5D000217F1A /* Build configuration list for PBXProject "Clinical_Trial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F647D36E1E56C5D000217F1A /* Debug */,
+				F647D36F1E56C5D000217F1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F647D3701E56C5D000217F1A /* Build configuration list for PBXNativeTarget "Clinical_Trial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F647D3711E56C5D000217F1A /* Debug */,
+				F647D3721E56C5D000217F1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F647D3731E56C5D000217F1A /* Build configuration list for PBXNativeTarget "Clinical_TrialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F647D3741E56C5D000217F1A /* Debug */,
+				F647D3751E56C5D000217F1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F647D3761E56C5D000217F1A /* Build configuration list for PBXNativeTarget "Clinical_TrialUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F647D3771E56C5D000217F1A /* Debug */,
+				F647D3781E56C5D000217F1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F647D3401E56C5D000217F1A /* Project object */;
+}
