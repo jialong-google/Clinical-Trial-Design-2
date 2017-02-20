@@ -163,8 +163,8 @@ func selectMtd (target : Double, npts : [Int] , ntox : [Int], cutoff_eli : Doubl
     var elimi = [Int](repeating:0, count: ndose)
     for i in 0..<ndose {
         if (n[i] >= 3) {
-            if (1 - pbeta(x: target, a: y[i] + 1, b: n[i] - y[i] + 1) > cutoff_eli) {
-                for j in i...ndose {
+            if ((1 - pbeta(x: target, a: y[i] + 1, b: n[i] - y[i] + 1)) > cutoff_eli) {
+                for j in (i + 1)...ndose {
                     elimi[j - 1] = 1
                 }
                 break
@@ -173,7 +173,7 @@ func selectMtd (target : Double, npts : [Int] , ntox : [Int], cutoff_eli : Doubl
     }
     if(extrasafe){
         if (n[0] >= 3) {
-            if (1 - pbeta(x: target, a: y[0] + 1, b: n[0] - y[0] + 1) > cutoff_eli - offset) {
+            if ((1 - pbeta(x: target, a: y[0] + 1, b: n[0] - y[0] + 1)) > (cutoff_eli - offset)) {
                 for j in 1...ndose {
                     elimi[j - 1] = 1
                 }
@@ -192,18 +192,12 @@ func selectMtd (target : Double, npts : [Int] , ntox : [Int], cutoff_eli : Doubl
         selectdose = 99
     }
     else {
-        //var adm_set : [Bool] = (n != 0) & (elimi == 0)
-        //var adm_index = which(adm_set == T)
-        //var y_adm = y[adm_set]
-        //var n_adm = n[adm_set]
-        //var phat : [Double] = (y_adm + 0.05)/(n_adm + 0.1)
-        //var phat_var = (y_adm + 0.05) * (n_adm - y_adm + 0.05)/((n_adm + 0.1)* (n_adm + 0.1) * (n_adm + 1.1)) // 1/
         var adm_index = [Int]()
         var y_adm = [Int]()
         var n_adm = [Int]()
         var phat = [Double?]()
         var phat_var = [Double]()
-        for i in 0..<min(n.count, elimi.count)
+        for i in 0..<ndose
         {
             if(n[i] != 0 && elimi[i] == 0) {
                 adm_index.append(i + 1)//!!!!!!
@@ -214,20 +208,29 @@ func selectMtd (target : Double, npts : [Int] , ntox : [Int], cutoff_eli : Doubl
             }
             
         }
-        phat = pava(x: &phat, wt: phat_var)
+        print()
+        print(phat)
+        print(phat_var)
+        print()
+        var phat_temp = pava(x: &phat, wt: phat_var)
         var min_index = 0
-        for i in 0..<phat.count{
-            if((phat[i]) != nil)
+        for i in 0..<phat_temp.count{
+            if((phat_temp[i]) != nil)
             {
-                phat[i]! += 1e-10
-                phat[i]! = abs(phat[i]! - target)
-                if(phat[i]!  < phat[min_index]!)
-                {
-                    min_index = i
-                }
+                phat_temp[i]! += 1e-10
+                
+            }
+            else
+            {
+                phat_temp[i] = 1e-10
+                
+            }
+            let temp = abs(phat_temp[i]! - target)
+            if(temp < phat_temp[min_index]!)
+            {
+                min_index = i
             }
         }
-        phat.sort{$0! < $1!}
         selectdose = adm_index[min_index]
     }
     
@@ -268,5 +271,8 @@ func selectMtd (target : Double, npts : [Int] , ntox : [Int], cutoff_eli : Doubl
 
 
 
-selectMtd(target: 0.3, npts: [3,3,15,9,0], ntox: [0,0,4,4,0])
-selectMtd(target: 0.3, npts: [0], ntox: [0])
+//selectMtd(target: 0.3, npts: [3,3,15,9,0], ntox: [0,0,4,4,0])
+//selectMtd(target: 0.3, npts: [0], ntox: [0])
+selectMtd(target: 0.3, npts: [3,3,15,9], ntox: [0,0,1,0])
+//selectMtd(target: 0.3, npts: [6,4,7,4], ntox: [0,0,1,0])
+//selectMtd(target: 0.3, npts: [9,10,8,7,8], ntox: [0,0,1,2,2])

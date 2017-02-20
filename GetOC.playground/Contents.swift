@@ -1,38 +1,38 @@
 import UIKit
 
-func B(a : Int,b : Int) -> Double
-{
-    return Btop(x:1, a: a, b:b)
-}
-
-func Btop(x : Double, a: Int, b: Int) -> Double
-{
-    if b == 1
-    {
-        return pow(x, Double(a)) / Double(a)
-    }
-    else{
-        let temp = pow(x, Double(a)) * pow(1 - x, Double(b - 1)) / Double(a)
-        return temp + Double(b - 1) / Double(a) * Btop(x: x, a: a + 1, b: b - 1)
-    }
-}
-func pbeta(x: Double,a: Int, b: Int) -> Double
-{
-    var res = Double()
-    let integral = Btop(x:x, a:a, b:b)
-    res = integral / B(a: a,b: b)
-    return res
-}
-
-func rbind( lists:[Int?]...) -> [[Int?]]
-{
-    var res = [[Int?]]()
-    for list in lists{
-        res.append(list);
-    }
-    return res;
-}
-func getOC(target: Double, p_true: [string],ncohort: Int, cohortsize: Int, p_saf : Double? = nil, p_tox : Double? = nil, cutoff_eli : Double = 0.95, extrasafe : Bool = false,n_earlystop: Int = 100,offset : Double = 0.05, stardose: Int=1,ntrial: Int=1000) -> ()
+//func B(a : Int,b : Int) -> Double
+//{
+//    return Btop(x:1, a: a, b:b)
+//}
+//
+//func Btop(x : Double, a: Int, b: Int) -> Double
+//{
+//    if b == 1
+//    {
+//        return pow(x, Double(a)) / Double(a)
+//    }
+//    else{
+//        let temp = pow(x, Double(a)) * pow(1 - x, Double(b - 1)) / Double(a)
+//        return temp + Double(b - 1) / Double(a) * Btop(x: x, a: a + 1, b: b - 1)
+//    }
+//}
+//func pbeta(x: Double,a: Int, b: Int) -> Double
+//{
+//    var res = Double()
+//    let integral = Btop(x:x, a:a, b:b)
+//    res = integral / B(a: a,b: b)
+//    return res
+//}
+//
+//func rbind( lists:[Int?]...) -> [[Int?]]
+//{
+//    var res = [[Int?]]()
+//    for list in lists{
+//        res.append(list);
+//    }
+//    return res;
+//}
+func getOc(target: Double, p_true: [String], ncohort: Int, cohortsize: Int, n_earlystop: Int = 100, startdose: Int = 1, p_saf : Double? = nil, p_tox : Double? = nil, cutoff_eli : Double = 0.95, extrasafe : Bool = false, offset : Double = 0.05, ntrial: Int=1000) -> ()
 {
     var psaf : Double = 0.0
     var ptox : Double = 0.0
