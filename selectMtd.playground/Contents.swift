@@ -208,25 +208,22 @@ func selectMtd (target : Double, npts : [Int] , ntox : [Int], cutoff_eli : Doubl
             }
             
         }
-        print()
-        print(phat)
-        print(phat_var)
-        print()
-        var phat_temp = pava(x: &phat, wt: phat_var)
+        
+        phat = pava(x: &phat, wt: phat_var)
         var min_index = 0
-        for i in 0..<phat_temp.count{
-            if((phat_temp[i]) != nil)
+        for i in 0..<phat.count{
+            if((phat[i]) != nil)
             {
-                phat_temp[i]! += 1e-10
+                phat[i]! += (Double)(i+1)*(1e-10)
                 
             }
             else
             {
-                phat_temp[i] = 1e-10
+                phat[i] = (Double)(i+1)*(1e-10)
                 
             }
-            let temp = abs(phat_temp[i]! - target)
-            if(temp < phat_temp[min_index]!)
+            let temp = abs(phat[i]! - target)
+            if(temp < abs(phat[min_index]! - target))
             {
                 min_index = i
             }
@@ -271,8 +268,8 @@ func selectMtd (target : Double, npts : [Int] , ntox : [Int], cutoff_eli : Doubl
 
 
 
-//selectMtd(target: 0.3, npts: [3,3,15,9,0], ntox: [0,0,4,4,0])
-//selectMtd(target: 0.3, npts: [0], ntox: [0])
+selectMtd(target: 0.3, npts: [3,3,15,9,0], ntox: [0,0,4,4,0])
+selectMtd(target: 0.3, npts: [0], ntox: [0])
 selectMtd(target: 0.3, npts: [3,3,15,9], ntox: [0,0,1,0])
-//selectMtd(target: 0.3, npts: [6,4,7,4], ntox: [0,0,1,0])
-//selectMtd(target: 0.3, npts: [9,10,8,7,8], ntox: [0,0,1,2,2])
+selectMtd(target: 0.3, npts: [6,4,7,4], ntox: [0,0,1,0])
+selectMtd(target: 0.3, npts: [9,10,8,7,8], ntox: [0,0,1,2,2])
