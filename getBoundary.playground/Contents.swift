@@ -96,7 +96,6 @@ func getCol(lists : [[Int?]], from : Int, to : Int, step :Int = 1) -> [[Int?]]{
 }
 
 func getBoundary(target : Double, ncohort : Int, cohortsize : Int, n_earlystop: Int = 100, p_saf : Double? = nil, p_tox : Double? = nil, cutoff_eli : Double = 0.95, extrasafe : Bool = false, offset : Double = 0.05, _print : Bool = true) -> ([[Int?]], [String], [String])?
-    // the return value is unsure. some of the objects should be applied.
 {
     var psaf : Double = 0.0
     var ptox : Double = 0.0
@@ -243,11 +242,12 @@ func getBoundary(target : Double, ncohort : Int, cohortsize : Int, n_earlystop: 
             
         }
     }
-    if (!_print){
         return (boundaries, row_boundaries, col_boundaries)
-    }
-    return nil
+    
 }
 
 //getBoundary(target: 0.3, ncohort: 8, cohortsize: 3)
 getBoundary(target: 0.3, ncohort: 8, cohortsize: 3, extrasafe: true)
+var temp = getBoundary(target: 0.3, ncohort: 8, cohortsize: 3, _print: false)
+print("\n")
+print(temp)
