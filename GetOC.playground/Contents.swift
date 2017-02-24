@@ -555,10 +555,19 @@ func getOc(target: Double, p_true: [Double], ncohort: Int, cohortsize: Int, n_ea
         }
         selpercent[i] = Double(temp*100) / Double(ntrial)
     }
+    var temp2 = 0
+    for j in dselect {
+        if(j == 99)
+        {
+            temp2 += 1
+        }
+    }
     print("selection percentage at each dose level (%):")
     print(selpercent)
     print("number of patients treated at each dose level:")
     print(nptsdose)
+    print("percentage of early stopping due to toxicity (%):")
+    print(Double(temp2 * 100)/Double(ntrial))
     return
 }
 
