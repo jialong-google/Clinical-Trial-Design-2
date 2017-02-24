@@ -44,6 +44,9 @@
                                 <rect key="frame" x="99" y="339" width="176" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Operating Characteristics"/>
+                                <connections>
+                                    <segue destination="m10-O5-dm4" kind="show" id="9Vr-5x-pQP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phs-Wh-O6P">
                                 <rect key="frame" x="170" y="541" width="32" height="30"/>
@@ -156,7 +159,7 @@ This application is used to design single-agent phase I clinical trials using th
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safty:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLL-Db-xu3">
-                                <rect key="frame" x="99" y="512" width="45" height="21"/>
+                                <rect key="frame" x="79.5" y="512" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -173,8 +176,8 @@ This application is used to design single-agent phase I clinical trials using th
                                     <segue destination="VUO-Ci-wTc" kind="show" id="Yq4-jM-gMo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum Sample Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFg-M3-Axn">
-                                <rect key="frame" x="99" y="117" width="177" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Size in Each Cohort:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFg-M3-Axn">
+                                <rect key="frame" x="79.5" y="117" width="216" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -518,10 +521,37 @@ This application is used to design single-agent phase I clinical trials using th
             </objects>
             <point key="canvasLocation" x="1620" y="1030"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="cBH-3w-Hk2">
+            <objects>
+                <viewController id="m10-O5-dm4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o1E-ph-5ce"/>
+                        <viewControllerLayoutGuide type="bottom" id="qUj-8r-iZf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hPR-tK-cc5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8g-kM-bdP">
+                                <rect key="frame" x="44" y="52" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Uga-pk-72F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oci-ke-q4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vh2-mU-atf"/>
         <segue reference="oTB-6a-QuC"/>
-        <segue reference="D2M-Hz-Byw"/>
+        <segue reference="zJF-zA-XvQ"/>
+        <segue reference="H2e-dl-gKB"/>
     </inferredMetricsTieBreakers>
 </document>
