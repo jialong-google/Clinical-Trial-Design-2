@@ -16,6 +16,7 @@
 		1846BDBC1E5A92E200BBBE93 /* BoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846BDBB1E5A92E200BBBE93 /* BoinUITests.swift */; };
 		1846BDCA1E5A980E00BBBE93 /* getboundaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846BDC91E5A980E00BBBE93 /* getboundaryViewController.swift */; };
 		1846BDCC1E5A997B00BBBE93 /* selectmtdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846BDCB1E5A997B00BBBE93 /* selectmtdViewController.swift */; };
+		F6BDC6C01E5FFB52008668AB /* BoundaryResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BDC6BF1E5FFB52008668AB /* BoundaryResultController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1846BDBD1E5A92E200BBBE93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1846BDC91E5A980E00BBBE93 /* getboundaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getboundaryViewController.swift; sourceTree = "<group>"; };
 		1846BDCB1E5A997B00BBBE93 /* selectmtdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectmtdViewController.swift; sourceTree = "<group>"; };
+		F6BDC6BF1E5FFB52008668AB /* BoundaryResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundaryResultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				1846BDA41E5A92E200BBBE93 /* LaunchScreen.storyboard */,
 				1846BDA71E5A92E200BBBE93 /* Info.plist */,
 				1846BDC91E5A980E00BBBE93 /* getboundaryViewController.swift */,
+				F6BDC6BF1E5FFB52008668AB /* BoundaryResultController.swift */,
 				1846BDCB1E5A997B00BBBE93 /* selectmtdViewController.swift */,
 			);
 			path = Boin;
@@ -269,6 +272,7 @@
 				1846BD9E1E5A92E200BBBE93 /* ViewController.swift in Sources */,
 				1846BDCA1E5A980E00BBBE93 /* getboundaryViewController.swift in Sources */,
 				1846BD9C1E5A92E200BBBE93 /* AppDelegate.swift in Sources */,
+				F6BDC6C01E5FFB52008668AB /* BoundaryResultController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +517,7 @@
 				1846BDC21E5A92E200BBBE93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1846BDC31E5A92E200BBBE93 /* Build configuration list for PBXNativeTarget "BoinTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +526,7 @@
 				1846BDC51E5A92E200BBBE93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1846BDC61E5A92E200BBBE93 /* Build configuration list for PBXNativeTarget "BoinUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +535,7 @@
 				1846BDC81E5A92E200BBBE93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

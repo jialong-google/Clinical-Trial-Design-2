@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -70,6 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2066" y="1"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UO9-lf-U0P">
@@ -111,7 +112,7 @@ This application is used to design single-agent phase I clinical trials using th
         <!--Getboundary View Controller-->
         <scene sceneID="dW6-v5-S9B">
             <objects>
-                <viewController id="FH0-JP-owP" customClass="getboundaryViewController" customModule="Boin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="boundaryView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FH0-JP-owP" customClass="getboundaryViewController" customModule="Boin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xt3-UR-fXy"/>
                         <viewControllerLayoutGuide type="bottom" id="Y2C-qp-byT"/>
@@ -167,7 +168,7 @@ This application is used to design single-agent phase I clinical trials using th
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CmR-pv-L4m">
                                 <rect key="frame" x="186" y="512" width="51" height="31"/>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="It2-Av-otW">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Go" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="It2-Av-otW">
                                 <rect key="frame" x="305" y="28" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go"/>
@@ -484,12 +485,12 @@ This application is used to design single-agent phase I clinical trials using th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CT0-cW-ADU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1255" y="1011"/>
+            <point key="canvasLocation" x="1716" y="989"/>
         </scene>
-        <!--View Controller-->
+        <!--Boundary Result Controller-->
         <scene sceneID="z2B-BO-yUj">
             <objects>
-                <viewController id="VUO-Ci-wTc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="boundaryResultView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VUO-Ci-wTc" customClass="BoundaryResultController" customModule="Boin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ExY-yg-dFq"/>
                         <viewControllerLayoutGuide type="bottom" id="RpE-6e-dlF"/>
@@ -513,13 +514,24 @@ This application is used to design single-agent phase I clinical trials using th
                                     <segue destination="FH0-JP-owP" kind="show" id="D2M-Hz-Byw"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LPO-jc-NbO">
+                                <rect key="frame" x="16" y="141" width="343" height="506"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="result" destination="LPO-jc-NbO" id="qa4-Be-5mG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzz-jJ-Mub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1620" y="1030"/>
+            <point key="canvasLocation" x="2557.5999999999999" y="1010.6446776611695"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cBH-3w-Hk2">
@@ -551,7 +563,7 @@ This application is used to design single-agent phase I clinical trials using th
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="oTB-6a-QuC"/>
-        <segue reference="zJF-zA-XvQ"/>
-        <segue reference="H2e-dl-gKB"/>
+        <segue reference="D2M-Hz-Byw"/>
+        <segue reference="Vh2-mU-atf"/>
     </inferredMetricsTieBreakers>
 </document>
