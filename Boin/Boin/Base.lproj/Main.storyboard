@@ -209,6 +209,7 @@ This application is used to design single-agent phase I clinical trials using th
                     </view>
                     <connections>
                         <outlet property="cohortsizeTextField" destination="4wb-dQ-KEd" id="Sp5-tJ-b2M"/>
+                        <outlet property="safetySwitch" destination="CmR-pv-L4m" id="2gI-Gq-Pef"/>
                         <outlet property="samplesizeTextFiled" destination="RV8-bb-GmN" id="exl-fe-GPt"/>
                         <outlet property="targetTextField" destination="fan-Yj-xoo" id="veu-ro-2gb"/>
                     </connections>

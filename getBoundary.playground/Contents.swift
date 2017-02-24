@@ -248,6 +248,6 @@ func getBoundary(target : Double, ncohort : Int, cohortsize : Int, n_earlystop: 
 
 //getBoundary(target: 0.3, ncohort: 8, cohortsize: 3)
 getBoundary(target: 0.3, ncohort: 8, cohortsize: 3, extrasafe: true)
-var temp = getBoundary(target: 0.3, ncohort: 8, cohortsize: 3, _print: false)
-print("\n")
-print(temp)
+//var temp = getBoundary(target: 0.3, ncohort: 8, cohortsize: 3, _print: false)
+//print("\n")
+//print(temp)

@@ -12,6 +12,9 @@ class getboundaryViewController: UIViewController {
     @IBOutlet weak var samplesizeTextFiled: UITextField!
     @IBOutlet weak var cohortsizeTextField: UITextField!
     @IBOutlet weak var targetTextField: UITextField!
+    @IBOutlet weak var safetySwitch: UISwitch!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -485,7 +488,7 @@ class getboundaryViewController: UIViewController {
         {
             return
         }
-        DestViewController.resultText = getBoundary(target: Double(targetTextField.text!)!, ncohort: Int(samplesizeTextFiled.text!)!, cohortsize: Int(cohortsizeTextField.text!)!,extrasafe: true, _print: true)!
+        DestViewController.resultText = getBoundary(target: Double(targetTextField.text!)!, ncohort: Int(samplesizeTextFiled.text!)!, cohortsize: Int(cohortsizeTextField.text!)!,extrasafe: safetySwitch.isOn, _print: true)!
     }
 
     /*
