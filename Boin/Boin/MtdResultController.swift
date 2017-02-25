@@ -1,16 +1,16 @@
 //
-//  BoundaryResultController.swift
+//  MtdResultController.swift
 //  Boin
 //
-//  Created by Jialong on 2/23/17.
+//  Created by Jialong on 2/24/17.
 //  Copyright © 2017 Jialong Li & Ziqiao Wang. All rights reserved.
 //
 
 import Foundation
 import UIKit
-class BoundaryResultController: UIViewController {
+class MtdResultController: UIViewController {
 
-    @IBOutlet var result: UITextView!
+    @IBOutlet var result: UILabel!
     var resultText = String()
     
     override func viewDidLoad() {
