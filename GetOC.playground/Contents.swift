@@ -571,5 +571,6 @@ func getOc(target: Double, p_true: [Double], ncohort: Int, cohortsize: Int, n_ea
     return
 }
 
-getOc(target: 0.3, p_true:[0.05, 0.15, 0.3, 0.6], ncohort: 10, cohortsize: 3)
+getOc(target: 0.3, p_true:[ 0.05, 0.15, 0.3, 0.6], ncohort: 10, cohortsize: 3)
+print("   1 32  44  4 4 ".components(separatedBy: " ").map{Int($0)}.filter{$0 != nil})
 

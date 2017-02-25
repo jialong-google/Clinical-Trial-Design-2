@@ -428,8 +428,9 @@ class GetOcViewController: UIViewController {
         return res
     }
     
-    func getOc(target: Double, p_true: [Double], ncohort: Int, cohortsize: Int, n_earlystop: Int = 100, startdose: Int = 1, p_saf : Double? = nil, p_tox : Double? = nil, cutoff_eli : Double = 0.95, extrasafe : Bool = false, offset : Double = 0.05, ntrial: Int=1000)
+    func getOc(target: Double, p_true: [Double], ncohort: Int, cohortsize: Int, n_earlystop: Int = 100, startdose: Int = 1, p_saf : Double? = nil, p_tox : Double? = nil, cutoff_eli : Double = 0.95, extrasafe : Bool = false, offset : Double = 0.05, ntrial: Int=1000) -> String
     {
+        var res : String = String()
         var psaf : Double = 0.0
         var ptox : Double = 0.0
         
@@ -450,28 +451,28 @@ class GetOcViewController: UIViewController {
             ptox = p_tox!
         }
         if (target < 0.05) {
-            print("Error: the target is too low! \n")
-            return
+            res += "Error: the target is too low! \n"
+            return res
         }
         if (target > 0.6) {
-            print("Error: the target is too high! \n")
-            return
+            res += "Error: the target is too high! \n"
+            return res
         }
         if ((target - psaf) < (0.1 * target)) {
-            print("Error: the probability deemed safe cannot be higher than or too close to the target! \n")
-            return
+            res += "Error: the probability deemed safe cannot be higher than or too close to the target! \n"
+            return res
         }
         if ((ptox - target) < (0.1 * target)) {
-            print("Error: the probability deemed toxic cannot be lower than or too close to the target! \n")
-            return
+            res += "Error: the probability deemed toxic cannot be lower than or too close to the target! \n"
+            return res
         }
         if (offset >= 0.5) {
-            print("Error: the offset is too large! \n")
-            return
+            res += "Error: the offset is too large! \n"
+            return res
         }
         if (n_earlystop <= 6) {
-            print("Warning: the value of n.earlystop is too low to ensure good operating characteristics. Recommend n.earlystop = 9 to 18 \n")
-            return
+            res += "Warning: the value of n.earlystop is too low to ensure good operating characteristics. Recommend n.earlystop = 9 to 18 \n"
+            return res
         }
         srand48(6)
         let ndose = p_true.count
@@ -558,26 +559,26 @@ class GetOcViewController: UIViewController {
                 temp2 += 1
             }
         }
-        print("selection percentage at each dose level (%):")
-        print(selpercent)
-        print("number of patients treated at each dose level:")
-        print(nptsdose)
-        print("percentage of early stopping due to toxicity (%):")
-        print(Double(temp2 * 100)/Double(ntrial))
-        return
+        res += "selection percentage at each dose level (%):"
+        res += String(describing: selpercent)
+        res += "\nnumber of patients treated at each dose level:"
+        res += String(describing: nptsdose)
+        res += "\npercentage of early stopping due to toxicity (%):"
+        res += String(Double(temp2 * 100)/Double(ntrial))
+        return res
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         let pvalueArray = pvalue.text!.components(separatedBy: " ").map{Double($0)}
+        
+        guard let  DestViewController : OcResultController = segue.destination as? OcResultController else
+        {
+            return
+        }
+        let pvalueArray = pvalue.text!.components(separatedBy: " ").map{Double($0)}.filter{$0 != nil}
         let targetValue = Double(target.text!)
         let ncohortValue = Int(ncohort.text!)
         let cohortsizeValue = Int(cohortsize.text!)
         
-    
-            guard let  DestViewController : OcResultController = segue.destination as? OcResultController else
-            {
-                return
-            }
         DestViewController.resultText = "\(getOc(target: targetValue!, p_true: pvalueArray as! [Double], ncohort: ncohortValue!, cohortsize: cohortsizeValue!))"
         }
 

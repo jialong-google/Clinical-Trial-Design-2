@@ -230,19 +230,14 @@ class selectmtdViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        print("What the fuck!")
-        print(nptsText.text!)
-        print(ntoxText.text!)
-        let nptsArray = nptsText.text!.components(separatedBy: " ").map{Int($0)}
-        let ntoxArray = ntoxText.text!.components(separatedBy: " ").map{Int($0)}
-        let targetValue = Double(target.text!)
-        
-        print(nptsArray)
-        print(ntoxArray)
         
         guard let destView = segue.destination as? MtdResultController else{
             return
         }
+        
+        let nptsArray = nptsText.text!.components(separatedBy: " ").map{Int($0)}.filter{$0 != nil}
+        let ntoxArray = ntoxText.text!.components(separatedBy: " ").map{Int($0)}.filter{$0 != nil}
+        let targetValue = target.text!.components(separatedBy: " ").map{Double($0)}.filter{$0 != nil}[0]
         destView.resultText = "\(selectMtd(target: targetValue!, npts: nptsArray as! [Int], ntox: ntoxArray as! [Int]))"
     }
 
