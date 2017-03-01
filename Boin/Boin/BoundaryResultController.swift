@@ -42,7 +42,7 @@ class BoundaryResultController: UIViewController {
         columns1[columns1.count - 1] += 310 - sum(array: columns1)
         
         self.firstMatrixView = NALLabelsMatrixView(frame: CGRect.init(x: 5, y: 140, width: 310, height: 50), columns: columns1)//麻烦子乔帮忙调下这里的参数。。
-        //width是横向宽度。
+        //width是横向宽度。(目前感觉310有点不太够)
         //hight是一行有多高。
         //一开始的CGRect.init是用函数画一个长方形，x和y是左上角那个点。
         
