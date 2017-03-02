@@ -428,11 +428,14 @@ class GetOcViewController: UIViewController {
         return res
     }
     
-    func getOc(target: Double, p_true: [Double], ncohort: Int, cohortsize: Int, n_earlystop: Int = 100, startdose: Int = 1, p_saf : Double? = nil, p_tox : Double? = nil, cutoff_eli : Double = 0.95, extrasafe : Bool = false, offset : Double = 0.05, ntrial: Int=1000) -> String
+    func getOc(target: Double, p_true: [Double], ncohort: Int, cohortsize: Int, n_earlystop: Int = 100, startdose: Int = 1, p_saf : Double? = nil, p_tox : Double? = nil, cutoff_eli : Double = 0.95, extrasafe : Bool = false, offset : Double = 0.05, ntrial: Int=1000) -> (res1: String, res2: String?, res3: String?, selpercent: [Double]?, nptsdose: [Double]?)
     {
         var res : String = String()
         var psaf : Double = 0.0
         var ptox : Double = 0.0
+        var res1 : String = String()
+        var res2 : String = String()
+        var res3 : String = String()
         
         if (p_saf == nil)
         {
@@ -452,27 +455,27 @@ class GetOcViewController: UIViewController {
         }
         if (target < 0.05) {
             res += "Error: the target is too low! \n"
-            return res
+            return (res, nil, nil, nil, nil)
         }
         if (target > 0.6) {
             res += "Error: the target is too high! \n"
-            return res
+            return (res, nil, nil, nil, nil)
         }
         if ((target - psaf) < (0.1 * target)) {
             res += "Error: the probability deemed safe cannot be higher than or too close to the target! \n"
-            return res
+            return (res, nil, nil, nil, nil)
         }
         if ((ptox - target) < (0.1 * target)) {
             res += "Error: the probability deemed toxic cannot be lower than or too close to the target! \n"
-            return res
+            return (res, nil, nil, nil, nil)
         }
         if (offset >= 0.5) {
             res += "Error: the offset is too large! \n"
-            return res
+            return (res, nil, nil, nil, nil)
         }
         if (n_earlystop <= 6) {
             res += "Warning: the value of n.earlystop is too low to ensure good operating characteristics. Recommend n.earlystop = 9 to 18 \n"
-            return res
+            return (res, nil, nil, nil, nil)
         }
         srand48(6)
         let ndose = p_true.count
@@ -559,13 +562,13 @@ class GetOcViewController: UIViewController {
                 temp2 += 1
             }
         }
-        res += "selection percentage at each dose level (%):"
-        res += String(describing: selpercent)
-        res += "\nnumber of patients treated at each dose level:"
-        res += String(describing: nptsdose)
-        res += "\npercentage of early stopping due to toxicity (%):"
-        res += String(Double(temp2 * 100)/Double(ntrial))
-        return res
+        res1 += "selection percentage at each dose level (%):"
+        //res += String(describing: selpercent)
+        res2 += "\nnumber of patients treated at each dose level:"
+        //res += String(describing: nptsdose)
+        res3 += "\npercentage of early stopping due to toxicity (%):"
+        res3 += String(Double(temp2 * 100)/Double(ntrial))
+        return (res1, res2, res3, selpercent, nptsdose)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -578,8 +581,13 @@ class GetOcViewController: UIViewController {
         let targetValue = Double(target.text!)
         let ncohortValue = Int(ncohort.text!)
         let cohortsizeValue = Int(cohortsize.text!)
-        
-        DestViewController.resultText = "\(getOc(target: targetValue!, p_true: pvalueArray as! [Double], ncohort: ncohortValue!, cohortsize: cohortsizeValue!))"
+        let ocResult = getOc(target: targetValue!, p_true: pvalueArray as! [Double], ncohort: ncohortValue!, cohortsize: cohortsizeValue!)
+        DestViewController.result1Text = ocResult.res1
+        DestViewController.result2Text = ocResult.res2!
+        DestViewController.result3Text = ocResult.res3!
+        DestViewController.selpercent = ocResult.selpercent
+        DestViewController.nptsdose = ocResult.nptsdose
+        //DestViewController.resultText = "\(getOc(target: targetValue!, p_true: pvalueArray as! [Double], ncohort: ncohortValue!, cohortsize: cohortsizeValue!))"
         }
 
     }
