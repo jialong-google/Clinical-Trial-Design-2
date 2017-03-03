@@ -212,7 +212,7 @@ class getboundaryViewController: UIViewController {
                 res2 += "\n"
                 res2 += "In addition to the default stopping rule (i.e., stop the trial if the lowest dose is eliminated), \n"
                 res2 += "the following more strict stopping safety rule will be used for extra safety: \n"
-                res2 += " stop the trial if (1) the number of patients treated at the lowest dose >= 3 AND\n(2) Pr(the toxicity rate of the lowest dose >\(target)| data) > \(cutoff_eli - offset),\n which corresponds to the following stopping boundaries:\n"
+                res2 += " stop the trial if (1) the number of patients treated at the lowest dose >= 3 AND\n(2) Pr(the toxicity rate of the lowest dose >\(target)| data) > \(cutoff_eli - offset)\n which corresponds to the following stopping boundaries:\n"
                 //diff
                 //res += String(describing: row_stopboundary)
                 //res += String(describing: stopboundary)

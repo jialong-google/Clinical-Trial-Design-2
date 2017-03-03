@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -247,16 +247,6 @@ This application is used to design single-agent phase I clinical trials using th
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsC-n9-zD6">
-                                <rect key="frame" x="134" y="511" width="91" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="9si-ox-gEW"/>
-                                    <constraint firstAttribute="width" constant="91" id="fnH-de-BMv"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwd-Zn-d9t">
                                 <rect key="frame" x="16" y="28" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
@@ -291,6 +281,16 @@ This application is used to design single-agent phase I clinical trials using th
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsC-n9-zD6">
+                                <rect key="frame" x="167" y="509" width="91" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9si-ox-gEW"/>
+                                    <constraint firstAttribute="width" constant="91" id="fnH-de-BMv"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -299,18 +299,18 @@ This application is used to design single-agent phase I clinical trials using th
                             <constraint firstItem="QeE-AG-E87" firstAttribute="top" secondItem="o3W-nU-lua" secondAttribute="bottom" constant="16" id="CFu-Wc-y0p"/>
                             <constraint firstItem="0TU-Mz-N48" firstAttribute="top" secondItem="uoI-BG-IHy" secondAttribute="bottom" constant="8" symbolic="YES" id="EGh-1j-Jb3"/>
                             <constraint firstItem="yAX-HZ-o0z" firstAttribute="top" secondItem="dks-FV-g05" secondAttribute="bottom" constant="35" id="Eyt-Xc-rAu"/>
-                            <constraint firstItem="MsC-n9-zD6" firstAttribute="top" secondItem="0TU-Mz-N48" secondAttribute="bottom" constant="31" id="Gkf-kA-DXp"/>
+                            <constraint firstItem="MsC-n9-zD6" firstAttribute="top" secondItem="0TU-Mz-N48" secondAttribute="bottom" constant="29" id="Gkf-kA-DXp"/>
                             <constraint firstItem="vLe-2O-oPu" firstAttribute="trailing" secondItem="4Nu-6m-cvh" secondAttribute="trailingMargin" id="Q8M-Jp-meI"/>
                             <constraint firstItem="yAX-HZ-o0z" firstAttribute="top" secondItem="4Nu-6m-cvh" secondAttribute="top" constant="312" id="QwL-Kn-GnM"/>
                             <constraint firstItem="dks-FV-g05" firstAttribute="trailing" secondItem="vLe-2O-oPu" secondAttribute="trailing" id="RRs-1U-MM5"/>
                             <constraint firstItem="dks-FV-g05" firstAttribute="leading" secondItem="xwd-Zn-d9t" secondAttribute="leading" id="T34-BZ-Qm4"/>
-                            <constraint firstItem="eMe-gQ-tDm" firstAttribute="top" secondItem="MsC-n9-zD6" secondAttribute="bottom" constant="126" id="WF5-TD-ec3"/>
+                            <constraint firstItem="eMe-gQ-tDm" firstAttribute="top" secondItem="MsC-n9-zD6" secondAttribute="bottom" constant="128" id="WF5-TD-ec3"/>
                             <constraint firstItem="dks-FV-g05" firstAttribute="trailing" secondItem="uoI-BG-IHy" secondAttribute="trailing" id="XhL-zO-Hnl"/>
                             <constraint firstItem="dks-FV-g05" firstAttribute="leading" secondItem="o3W-nU-lua" secondAttribute="leading" id="bS4-qb-RQ6"/>
                             <constraint firstItem="yAX-HZ-o0z" firstAttribute="leading" secondItem="QeE-AG-E87" secondAttribute="leading" id="cNE-yg-qFb"/>
                             <constraint firstItem="0TU-Mz-N48" firstAttribute="centerX" secondItem="QeE-AG-E87" secondAttribute="centerX" id="hUt-B5-34r"/>
                             <constraint firstItem="xwd-Zn-d9t" firstAttribute="baseline" secondItem="vLe-2O-oPu" secondAttribute="baseline" id="lUS-ig-5Tg"/>
-                            <constraint firstItem="MsC-n9-zD6" firstAttribute="leading" secondItem="4Nu-6m-cvh" secondAttribute="leading" constant="134" id="rCt-Tj-fW6"/>
+                            <constraint firstItem="MsC-n9-zD6" firstAttribute="leading" secondItem="4Nu-6m-cvh" secondAttribute="leading" constant="167" id="rCt-Tj-fW6"/>
                             <constraint firstItem="dks-FV-g05" firstAttribute="leading" secondItem="uoI-BG-IHy" secondAttribute="leading" id="uR2-e8-i6N"/>
                             <constraint firstItem="uoI-BG-IHy" firstAttribute="top" secondItem="yAX-HZ-o0z" secondAttribute="bottom" constant="8" symbolic="YES" id="vuI-Yi-KUs"/>
                             <constraint firstItem="xwd-Zn-d9t" firstAttribute="leading" secondItem="4Nu-6m-cvh" secondAttribute="leadingMargin" id="xFJ-gT-wX4"/>
@@ -394,21 +394,21 @@ This application is used to design single-agent phase I clinical trials using th
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Complete decision boundaries is given by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBV-uo-JnA">
+                                <rect key="frame" x="16" y="273" width="318" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r6I-Z0-r3I">
-                                <rect key="frame" x="16" y="363" width="343" height="122"/>
+                                <rect key="frame" x="16" y="415" width="343" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Complete decision boundaries is given by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBV-uo-JnA">
-                                <rect key="frame" x="16" y="257" width="318" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -434,26 +434,26 @@ This application is used to design single-agent phase I clinical trials using th
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8g-kM-bdP">
-                                <rect key="frame" x="44" y="52" width="34" height="30"/>
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Uga-pk-72F"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="True Toxicity Probability of Each Dose Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjI-ar-Z4v">
-                                <rect key="frame" x="21" y="113" width="333" height="21"/>
+                                <rect key="frame" x="21" y="81" width="333" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please seperate your input with space" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGM-Uf-Gdf">
-                                <rect key="frame" x="16" y="142" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Please seperate your input with space" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGM-Uf-Gdf">
+                                <rect key="frame" x="16" y="110" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.020532956710000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TOS-Yd-vjY">
-                                <rect key="frame" x="16" y="171" width="343" height="110"/>
+                                <rect key="frame" x="16" y="139" width="343" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="H5G-aQ-6kI"/>
                                 </constraints>
@@ -462,19 +462,19 @@ This application is used to design single-agent phase I clinical trials using th
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Size in Each Cohort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFo-UK-0bU">
-                                <rect key="frame" x="82" y="323" width="211" height="21"/>
+                                <rect key="frame" x="82" y="291" width="211" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cohort Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFK-eq-eye">
-                                <rect key="frame" x="142" y="425" width="90" height="21"/>
+                                <rect key="frame" x="142" y="393" width="90" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tVW-lJ-eyP">
-                                <rect key="frame" x="141" y="364" width="91" height="30"/>
+                                <rect key="frame" x="141" y="332" width="91" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LYk-Mq-awd"/>
                                     <constraint firstAttribute="width" constant="91" id="eWm-ja-MCe"/>
@@ -484,7 +484,7 @@ This application is used to design single-agent phase I clinical trials using th
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aGt-bt-QgO">
-                                <rect key="frame" x="141" y="468" width="91" height="30"/>
+                                <rect key="frame" x="141" y="436" width="91" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="91" id="FHe-Xc-Tqm"/>
                                     <constraint firstAttribute="height" constant="30" id="Rv0-dH-2DQ"/>
@@ -494,13 +494,13 @@ This application is used to design single-agent phase I clinical trials using th
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pD2-Oa-O45">
-                                <rect key="frame" x="161" y="531" width="50" height="21"/>
+                                <rect key="frame" x="161" y="499" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UZ6-kX-SuP">
-                                <rect key="frame" x="141" y="570" width="91" height="30"/>
+                                <rect key="frame" x="141" y="538" width="91" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="91" id="8a2-UZ-hrd"/>
                                     <constraint firstAttribute="height" constant="30" id="ahY-ic-yeq"/>
@@ -510,7 +510,7 @@ This application is used to design single-agent phase I clinical trials using th
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZA-nr-2XP">
-                                <rect key="frame" x="305" y="52" width="26" height="30"/>
+                                <rect key="frame" x="333" y="20" width="26" height="30"/>
                                 <state key="normal" title="Go"/>
                                 <connections>
                                     <segue destination="lWg-jV-asd" kind="show" id="7PE-rH-UfF"/>
@@ -524,28 +524,28 @@ This application is used to design single-agent phase I clinical trials using th
                             <constraint firstItem="aGt-bt-QgO" firstAttribute="leading" secondItem="UZ6-kX-SuP" secondAttribute="leading" id="9Ug-bs-eB8"/>
                             <constraint firstItem="TOS-Yd-vjY" firstAttribute="leading" secondItem="qGM-Uf-Gdf" secondAttribute="leading" id="BcT-hu-xZe"/>
                             <constraint firstItem="TOS-Yd-vjY" firstAttribute="trailing" secondItem="qGM-Uf-Gdf" secondAttribute="trailing" id="EDP-b3-qXn"/>
-                            <constraint firstItem="k8g-kM-bdP" firstAttribute="top" secondItem="o1E-ph-5ce" secondAttribute="bottom" constant="32" id="FBt-wU-nyJ"/>
+                            <constraint firstItem="k8g-kM-bdP" firstAttribute="top" secondItem="o1E-ph-5ce" secondAttribute="bottom" id="FBt-wU-nyJ"/>
                             <constraint firstItem="pD2-Oa-O45" firstAttribute="top" secondItem="aGt-bt-QgO" secondAttribute="bottom" constant="33" id="HQi-oM-T3s"/>
                             <constraint firstItem="UZ6-kX-SuP" firstAttribute="top" secondItem="pD2-Oa-O45" secondAttribute="bottom" constant="18" id="LfY-LA-bUv"/>
-                            <constraint firstItem="dZA-nr-2XP" firstAttribute="leading" secondItem="hPR-tK-cc5" secondAttribute="leadingMargin" constant="289" id="Nf7-5L-OnB"/>
+                            <constraint firstItem="dZA-nr-2XP" firstAttribute="leading" secondItem="hPR-tK-cc5" secondAttribute="leadingMargin" constant="317" id="Nf7-5L-OnB"/>
                             <constraint firstItem="tVW-lJ-eyP" firstAttribute="top" secondItem="wFo-UK-0bU" secondAttribute="bottom" constant="20" id="P0A-de-3X7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dZA-nr-2XP" secondAttribute="trailing" constant="28" id="P5p-Q2-1S3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dZA-nr-2XP" secondAttribute="trailing" id="P5p-Q2-1S3"/>
                             <constraint firstItem="TOS-Yd-vjY" firstAttribute="top" secondItem="qGM-Uf-Gdf" secondAttribute="bottom" constant="8" symbolic="YES" id="STE-m1-fJL"/>
                             <constraint firstItem="TOS-Yd-vjY" firstAttribute="centerX" secondItem="rjI-ar-Z4v" secondAttribute="centerX" id="U2o-eV-oLf"/>
                             <constraint firstItem="aGt-bt-QgO" firstAttribute="centerX" secondItem="pD2-Oa-O45" secondAttribute="centerX" id="Zke-ca-zPc"/>
                             <constraint firstItem="qGM-Uf-Gdf" firstAttribute="top" secondItem="rjI-ar-Z4v" secondAttribute="bottom" constant="8" symbolic="YES" id="a4i-0G-99G"/>
                             <constraint firstItem="TOS-Yd-vjY" firstAttribute="trailing" secondItem="hPR-tK-cc5" secondAttribute="trailingMargin" id="aTV-DT-mEP"/>
-                            <constraint firstItem="qUj-8r-iZf" firstAttribute="top" secondItem="TOS-Yd-vjY" secondAttribute="bottom" constant="386" id="bic-2p-aXu"/>
+                            <constraint firstItem="qUj-8r-iZf" firstAttribute="top" secondItem="TOS-Yd-vjY" secondAttribute="bottom" constant="418" id="bic-2p-aXu"/>
                             <constraint firstItem="aGt-bt-QgO" firstAttribute="top" secondItem="ZFK-eq-eye" secondAttribute="bottom" constant="22" id="cHq-Av-1QX"/>
                             <constraint firstItem="aGt-bt-QgO" firstAttribute="leading" secondItem="tVW-lJ-eyP" secondAttribute="leading" id="gEy-HS-iYB"/>
                             <constraint firstItem="wFo-UK-0bU" firstAttribute="centerX" secondItem="ZFK-eq-eye" secondAttribute="centerX" id="k9p-QY-cHg"/>
                             <constraint firstItem="rjI-ar-Z4v" firstAttribute="top" secondItem="dZA-nr-2XP" secondAttribute="bottom" constant="31" id="m4l-pf-6yz"/>
                             <constraint firstItem="rjI-ar-Z4v" firstAttribute="top" secondItem="k8g-kM-bdP" secondAttribute="bottom" constant="31" id="rBQ-xM-fOe"/>
                             <constraint firstItem="aGt-bt-QgO" firstAttribute="trailing" secondItem="ZFK-eq-eye" secondAttribute="trailing" id="sA5-Lu-vBF"/>
-                            <constraint firstItem="dZA-nr-2XP" firstAttribute="top" secondItem="o1E-ph-5ce" secondAttribute="bottom" constant="32" id="sBd-ck-xWG"/>
+                            <constraint firstItem="dZA-nr-2XP" firstAttribute="top" secondItem="o1E-ph-5ce" secondAttribute="bottom" id="sBd-ck-xWG"/>
                             <constraint firstItem="TOS-Yd-vjY" firstAttribute="leading" secondItem="hPR-tK-cc5" secondAttribute="leadingMargin" id="w1k-BP-I0O"/>
-                            <constraint firstAttribute="bottom" secondItem="aGt-bt-QgO" secondAttribute="bottom" constant="169" id="xZH-Ay-Tmd"/>
-                            <constraint firstItem="k8g-kM-bdP" firstAttribute="leading" secondItem="hPR-tK-cc5" secondAttribute="leadingMargin" constant="28" id="yeq-50-kc6"/>
+                            <constraint firstAttribute="bottom" secondItem="aGt-bt-QgO" secondAttribute="bottom" constant="201" id="xZH-Ay-Tmd"/>
+                            <constraint firstItem="k8g-kM-bdP" firstAttribute="leading" secondItem="hPR-tK-cc5" secondAttribute="leadingMargin" id="yeq-50-kc6"/>
                         </constraints>
                     </view>
                     <connections>
@@ -557,6 +557,7 @@ This application is used to design single-agent phase I clinical trials using th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oci-ke-q4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="657" y="0.0"/>
         </scene>
         <!--Oc Result Controller-->
         <scene sceneID="9DK-nd-ekq">
@@ -571,7 +572,7 @@ This application is used to design single-agent phase I clinical trials using th
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PoX-6l-QrO">
-                                <rect key="frame" x="16" y="91" width="343" height="84"/>
+                                <rect key="frame" x="16" y="91" width="343" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -579,7 +580,7 @@ This application is used to design single-agent phase I clinical trials using th
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SC3-w7-ihn">
-                                <rect key="frame" x="16" y="358" width="343" height="84"/>
+                                <rect key="frame" x="16" y="328" width="343" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -595,7 +596,7 @@ This application is used to design single-agent phase I clinical trials using th
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="odP-fR-dLr">
-                                <rect key="frame" x="22" y="588" width="343" height="59"/>
+                                <rect key="frame" x="22" y="600" width="343" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -613,13 +614,13 @@ This application is used to design single-agent phase I clinical trials using th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1j-nd-5en" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-764" y="70"/>
+            <point key="canvasLocation" x="-764" y="69.715142428785612"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fDf-UW-AUk"/>
-        <segue reference="Uga-pk-72F"/>
-        <segue reference="D2M-Hz-Byw"/>
         <segue reference="Vh2-mU-atf"/>
+        <segue reference="fDf-UW-AUk"/>
+        <segue reference="oTB-6a-QuC"/>
+        <segue reference="D2M-Hz-Byw"/>
     </inferredMetricsTieBreakers>
 </document>

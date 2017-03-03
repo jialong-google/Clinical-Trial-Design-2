@@ -25,7 +25,7 @@ class OcResultController: UIViewController {
         result.text = result1Text + String(describing: selpercent!)
         result2.text = result2Text + String(describing: nptsdose!)
         result3.text = result3Text
-        //frame里面是这个外框的大小，这个需要子乔来调节~~
+
         let barChart = PNBarChart(frame: CGRect(x: 0.0, y: 135.0, width: 320.0, height: 200.0))
         barChart.backgroundColor = UIColor.clear
         barChart.animationType = .Waterfall
@@ -39,7 +39,7 @@ class OcResultController: UIViewController {
         barChart.yValues = sel
         //[1.1, 23.3, 12.5, 18.9, 30.1, 12.9, 21.9]
         barChart.strokeChart()
-        barChart.center = CGPoint(x:235, y:160)//表格的中心~麻烦子乔调啦
+        barChart.center = CGPoint(x:220, y:260)
         
         let barChart2 = PNBarChart(frame: CGRect(x: 0.0, y: 135.0, width: 320.0, height: 200.0))
         barChart2.backgroundColor = UIColor.clear
@@ -53,7 +53,7 @@ class OcResultController: UIViewController {
         barChart2.yValues = npts
         //[1.1, 23.3, 12.5, 18.9, 30.1, 12.9, 21.9]
         barChart2.strokeChart()
-        barChart2.center = CGPoint(x:235, y:560)//表格的中心，麻烦子乔啦
+        barChart2.center = CGPoint(x:220, y:530)
         
         self.view.addSubview(barChart)
         self.view.addSubview(barChart2)
