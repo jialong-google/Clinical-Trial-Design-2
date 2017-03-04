@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class NALLabelsMatrixView : UIView {
+class NALLabelsMatrixView : UIScrollView {
     var columnWidths: Array<Int>
     var numRows:Int=0
     var dy:Int=0
