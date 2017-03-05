@@ -22,8 +22,20 @@ class OcResultController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        result.text = result1Text + String(describing: selpercent!)
-        result2.text = result2Text + String(describing: nptsdose!)
+        for i in selpercent!.map({String(format:"%.2f",$0)})
+        {
+            result1Text += "  "
+            result1Text += i
+  
+                  }
+        for i in nptsdose!.map({String(format:"%.2f",$0)})
+        {
+            result2Text += "  "
+            result2Text += i
+        }
+
+        result.text = result1Text
+        result2.text = result2Text
         result3.text = result3Text
 
         let barChart = PNBarChart(frame: CGRect(x: 0.0, y: 135.0, width: 320.0, height: 200.0))

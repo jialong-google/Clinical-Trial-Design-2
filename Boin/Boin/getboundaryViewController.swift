@@ -21,7 +21,8 @@ class getboundaryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func gobuttontapped(_ sender: Any) {
-        
+               
+
     }
     func B(a : Int,b : Int) -> Double
     {
@@ -232,6 +233,32 @@ class getboundaryViewController: UIViewController {
         guard let  DestViewController : BoundaryResultController = segue.destination as? BoundaryResultController else
         {
             return
+        }
+        let samplesize = samplesizeTextFiled.text;
+        let cohort = cohortsizeTextField.text;
+        let target = targetTextField.text;
+        func displayMyAlertMessage(userMessage:String)
+        {
+            let myAlert = UIAlertController(title:"Alert",message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
+            let okAction = UIAlertAction(title:"OK",style:UIAlertActionStyle.default,handler:nil);
+            myAlert.addAction(okAction);
+            self.present(myAlert,animated:true,completion:nil);
+        }
+        if ((samplesize?.isEmpty)! || (cohort?.isEmpty)! || (target?.isEmpty)!)
+        {
+            displayMyAlertMessage(userMessage: "All fields are required");
+            return;
+        }
+        let string = NSString(string: target!)
+        if ( string.doubleValue > 0.6 )
+        {
+            displayMyAlertMessage(userMessage: "Error: the target is too high! ");
+            return;
+        }
+if (  string.doubleValue < 0.05)
+{
+    displayMyAlertMessage(userMessage: "Error: the target is too low! ");
+    return;
         }
         let boundaryResult = getBoundary(target: Double(targetTextField.text!)!, ncohort: Int(samplesizeTextFiled.text!)!, cohortsize: Int(cohortsizeTextField.text!)!,extrasafe: safetySwitch.isOn, _print: true)!
         DestViewController.resultText = boundaryResult.firstHint!

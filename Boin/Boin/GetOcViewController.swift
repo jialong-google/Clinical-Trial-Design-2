@@ -577,11 +577,51 @@ class GetOcViewController: UIViewController {
         {
             return
         }
+        let pv = pvalue.text;
+        let cohort = cohortsize.text;
+        let nc = ncohort.text;
+        let tt = target.text;
+        func displayMyAlertMessage(userMessage:String)
+        {
+            let myAlert = UIAlertController(title:"Alert",message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
+            let okAction = UIAlertAction(title:"OK",style:UIAlertActionStyle.default,handler:nil);
+            myAlert.addAction(okAction);
+            self.present(myAlert,animated:true,completion:nil);
+        }
+        if ((pv?.isEmpty)! || (cohort?.isEmpty)! || (nc?.isEmpty)! || (tt?.isEmpty)!)
+        {
+            displayMyAlertMessage(userMessage: "All fields are required");
+            return;
+        }
+        let string = NSString(string: tt!)
+        if ( string.doubleValue > 0.6 )
+        {
+            displayMyAlertMessage(userMessage: "Error: the target is too high! ");
+            return;
+        }
+        if (  string.doubleValue < 0.05)
+        {
+            displayMyAlertMessage(userMessage: "Error: the target is too low! ");
+            return;
+        }
+
+
+
         let pvalueArray = pvalue.text!.components(separatedBy: " ").map{Double($0)}.filter{$0 != nil}
         let targetValue = Double(target.text!)
         let ncohortValue = Int(ncohort.text!)
         let cohortsizeValue = Int(cohortsize.text!)
         let ocResult = getOc(target: targetValue!, p_true: pvalueArray as! [Double], ncohort: ncohortValue!, cohortsize: cohortsizeValue!)
+     //   for i in 0..<pvalueArray.count
+       // {
+          
+         //   if ( pvalueArrayKey > 1.0 ||  pvalueArrayKey < 0.0)
+           // {
+             //   displayMyAlertMessage(userMessage: "Please enter valid number");
+               // return;
+            //}
+        
+       //}
         DestViewController.result1Text = ocResult.res1
         DestViewController.result2Text = ocResult.res2!
         DestViewController.result3Text = ocResult.res3!

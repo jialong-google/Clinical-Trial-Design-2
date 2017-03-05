@@ -234,13 +234,52 @@ class selectmtdViewController: UIViewController {
         guard let destView = segue.destination as? MtdResultController else{
             return
         }
+        let total = nptsText.text;
+        let npt = ntoxText.text;
+        let tt = target.text;
+        func displayMyAlertMessage(userMessage:String)
+        {
+            let myAlert = UIAlertController(title:"Alert",message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
+            let okAction = UIAlertAction(title:"OK",style:UIAlertActionStyle.default,handler:nil);
+            myAlert.addAction(okAction);
+            self.present(myAlert,animated:true,completion:nil);
+        }
+        if ((total?.isEmpty)! || (npt?.isEmpty)! || (tt?.isEmpty)!)
+        {
+            displayMyAlertMessage(userMessage: "All fields are required");
+            return;
+        }
+        let string = NSString(string: tt!)
+        if ( string.doubleValue > 1.0 ||  string.doubleValue < 0.0)
+        {
+            displayMyAlertMessage(userMessage: "Please enter valid number");
+            return;
+        }
+        //var intto = Array<Int>!
+        //var intnpt = Array<Int>!
+   //     let intto = total.map { Int($0)!}
+        //let intnpt = npt.map { Int($0)!}
         
+//if (intto.count != intnpt.count)
+//{
+  //  displayMyAlertMessage(userMessage: "Please match the number of patients in each area");
+    //return;
+
+      //  }
+
         let nptsArray = nptsText.text!.components(separatedBy: " ").map{Int($0)}.filter{$0 != nil}
         let ntoxArray = ntoxText.text!.components(separatedBy: " ").map{Int($0)}.filter{$0 != nil}
         let targetValue = target.text!.components(separatedBy: " ").map{Double($0)}.filter{$0 != nil}[0]
-        destView.resultText = "\(selectMtd(target: targetValue!, npts: nptsArray as! [Int], ntox: ntoxArray as! [Int]))"
-    }
+        if (nptsArray.count != ntoxArray.count)
+        {
+            displayMyAlertMessage(userMessage: "Please match the number of patients in each area");
+            return;
+        }
 
+        destView.resultText = "\(selectMtd(target: targetValue!, npts: nptsArray as! [Int], ntox: ntoxArray as! [Int]))"
+           }
+   
+   
     /*
     // MARK: - Navigation
 
