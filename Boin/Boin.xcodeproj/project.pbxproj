@@ -33,6 +33,7 @@
 		F6B30C4E1E67DCD400E96E80 /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B30C421E67DCD400E96E80 /* PNValue.swift */; };
 		F6BDC6C01E5FFB52008668AB /* BoundaryResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BDC6BF1E5FFB52008668AB /* BoundaryResultController.swift */; };
 		F6D1796C1E66936E005D87AF /* NALLabelsMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D1796B1E66936E005D87AF /* NALLabelsMatrix.swift */; };
+		F6F431C81E6E60D400D189E6 /* AdvancedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F431C71E6E60D400D189E6 /* AdvancedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		F6B30C421E67DCD400E96E80 /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNValue.swift; sourceTree = "<group>"; };
 		F6BDC6BF1E5FFB52008668AB /* BoundaryResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoundaryResultController.swift; sourceTree = "<group>"; };
 		F6D1796B1E66936E005D87AF /* NALLabelsMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NALLabelsMatrix.swift; sourceTree = "<group>"; };
+		F6F431C71E6E60D400D189E6 /* AdvancedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				F6B30C361E67D82800E96E80 /* SourceCode */,
 				1846BD9B1E5A92E200BBBE93 /* AppDelegate.swift */,
+				F6F431C71E6E60D400D189E6 /* AdvancedViewController.swift */,
 				1846BD9D1E5A92E200BBBE93 /* ViewController.swift */,
 				1846BD9F1E5A92E200BBBE93 /* Main.storyboard */,
 				183082CC1E612D3700E5B325 /* GetOcViewController.swift */,
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1846BDCC1E5A997B00BBBE93 /* selectmtdViewController.swift in Sources */,
+				F6F431C81E6E60D400D189E6 /* AdvancedViewController.swift in Sources */,
 				183082CB1E61295D00E5B325 /* OcResultController.swift in Sources */,
 				F6B30C4B1E67DCD400E96E80 /* PNLineChartDataItem.swift in Sources */,
 				F6B30C4A1E67DCD400E96E80 /* PNLineChartData.swift in Sources */,

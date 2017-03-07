@@ -249,12 +249,19 @@ class selectmtdViewController: UIViewController {
             displayMyAlertMessage(userMessage: "All fields are required");
             return;
         }
+   
         let string = NSString(string: tt!)
-        if ( string.doubleValue > 1.0 ||  string.doubleValue < 0.0)
+        if ( string.doubleValue > 0.6 )
         {
-            displayMyAlertMessage(userMessage: "Please enter valid number");
+            displayMyAlertMessage(userMessage: "Error: the target is too high! ");
             return;
         }
+        if (  string.doubleValue < 0.05)
+        {
+            displayMyAlertMessage(userMessage: "Error: the target is too low! ");
+            return;
+        }
+
         //var intto = Array<Int>!
         //var intnpt = Array<Int>!
    //     let intto = total.map { Int($0)!}

@@ -14,6 +14,12 @@ class getboundaryViewController: UIViewController {
     @IBOutlet weak var targetTextField: UITextField!
     @IBOutlet weak var safetySwitch: UISwitch!
     
+    var extrasafe_value : Bool = false
+    var earlystop_value : Int? = nil
+    var fi1_value : Double? = nil
+    var fi2_value : Double? = nil
+    var offset_value : Double? = nil
+    var cutoff_value : Double? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,8 +89,6 @@ class getboundaryViewController: UIViewController {
         var res2 : String = String()
         var digested :[[Int?]]? = nil
         var twoLines :[[Int?]]? = nil
-        
-        
         if (p_saf == nil)
         {
             psaf = 0.6 * target
@@ -166,12 +170,10 @@ class getboundaryViewController: UIViewController {
         }
         
         let boundaries = getCol(lists: rbind(lists: ntrt, b_e, b_d, elim), from :1, to: min(npts,n_earlystop))
-        //let row_boundaries =  ["Number of patients treated", "Escalate if # of DLT <=", "Deescalate if # of DLT >=", "Eliminate if # of DLT >="]
-        
         
         if (_print) {
-            res1 += "Escalate dose if the observed toxicity rate at the current dose <= \(lambda1)\n"
-            res1 += "Deescalate dose if the observed toxicity rate at the current dose >= \(lambda2)\n\n"
+            res1 += String(format:"Escalate dose if the observed toxicity rate at the current dose <= %.2f\n",lambda1)
+            res1 += String(format:"Deescalate dose if the observed toxicity rate at the current dose >= %.2f\n\n",lambda2)
             //res1 += "This is equivalent to the following decision boundaries\n"
             digested = getCol(lists: boundaries, from: 1, to: (min(npts, n_earlystop)/cohortsize), step: cohortsize)
             if (cohortsize > 1) {
@@ -255,17 +257,30 @@ class getboundaryViewController: UIViewController {
             displayMyAlertMessage(userMessage: "Error: the target is too high! ");
             return;
         }
-if (  string.doubleValue < 0.05)
-{
-    displayMyAlertMessage(userMessage: "Error: the target is too low! ");
-    return;
+        if ( string.doubleValue < 0.05)
+        {
+            displayMyAlertMessage(userMessage: "Error: the target is too low! ");
+            return;
         }
-        let boundaryResult = getBoundary(target: Double(targetTextField.text!)!, ncohort: Int(samplesizeTextFiled.text!)!, cohortsize: Int(cohortsizeTextField.text!)!,extrasafe: safetySwitch.isOn, _print: true)!
-        DestViewController.resultText = boundaryResult.firstHint!
-        DestViewController.resultText2 = boundaryResult.secondHint!
-        DestViewController.firstMatrixContent = boundaryResult.digested
-        DestViewController.secondMatrixContent = boundaryResult.complete
-        DestViewController.thirdMatrixContent = boundaryResult.twoLines
+        if(earlystop_value == nil||fi1_value == nil||fi2_value == nil||offset_value == nil||cutoff_value == nil)
+        {
+            let boundaryResult = getBoundary(target: Double(targetTextField.text!)!, ncohort: Int(samplesizeTextFiled.text!)!, cohortsize: Int(cohortsizeTextField.text!)!, _print: true)!
+            DestViewController.resultText = boundaryResult.firstHint!
+            DestViewController.resultText2 = boundaryResult.secondHint!
+            DestViewController.firstMatrixContent = boundaryResult.digested
+            DestViewController.secondMatrixContent = boundaryResult.complete
+            DestViewController.thirdMatrixContent = boundaryResult.twoLines
+        }
+        else{
+            let boundaryResult = getBoundary(target: Double(targetTextField.text!)!, ncohort: Int(samplesizeTextFiled.text!)!, cohortsize: Int(cohortsizeTextField.text!)!, n_earlystop : earlystop_value!, p_saf : fi1_value!, p_tox : fi2_value!, cutoff_eli : cutoff_value!, extrasafe : extrasafe_value, offset : offset_value!, _print : true)!
+            
+            DestViewController.resultText = boundaryResult.firstHint!
+            DestViewController.resultText2 = boundaryResult.secondHint!
+            DestViewController.firstMatrixContent = boundaryResult.digested
+            DestViewController.secondMatrixContent = boundaryResult.complete
+            DestViewController.thirdMatrixContent = boundaryResult.twoLines
+        }
+        
     }
 
     /*

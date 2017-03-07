@@ -562,9 +562,9 @@ class GetOcViewController: UIViewController {
                 temp2 += 1
             }
         }
-        res1 += "selection percentage at each dose level (%):"
+        res1 += "selection percentage at each dose level (%):\n"
         //res += String(describing: selpercent)
-        res2 += "\nnumber of patients treated at each dose level:"
+        res2 += "\nnumber of patients treated at each dose level:\n"
         //res += String(describing: nptsdose)
         res3 += "\npercentage of early stopping due to toxicity (%):"
         res3 += String(Double(temp2 * 100)/Double(ntrial))

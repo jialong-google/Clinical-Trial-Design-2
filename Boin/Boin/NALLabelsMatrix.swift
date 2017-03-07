@@ -42,7 +42,7 @@ class NALLabelsMatrixView : UIScrollView {
             column.layer.borderColor = UIColor.darkGray.cgColor
             column.layer.borderWidth = 1.0
             column.font = UIFont.init(name: "Helvetica", size: 12.0)
-            
+            column.textAlignment = NSTextAlignment.center
             column.text = record[i]
             self.addSubview(column)
         }
