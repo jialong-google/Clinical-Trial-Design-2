@@ -440,7 +440,7 @@ This application is used to design single-agent phase I clinical trials using th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aml-Du-DwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1141.5999999999999" y="1066.4167916041979"/>
+            <point key="canvasLocation" x="1177" y="1051"/>
         </scene>
         <!--Selectmtd View Controller-->
         <scene sceneID="iZF-tC-Fsn">

@@ -9,11 +9,14 @@
 import UIKit
 
 class getboundaryViewController: UIViewController {
-    @IBOutlet weak var samplesizeTextFiled: UITextField!
-    @IBOutlet weak var cohortsizeTextField: UITextField!
-    @IBOutlet weak var targetTextField: UITextField!
-    @IBOutlet weak var safetySwitch: UISwitch!
+    @IBOutlet var samplesizeTextFiled: UITextField!
+    @IBOutlet var cohortsizeTextField: UITextField!
+    @IBOutlet var targetTextField: UITextField!
+    //@IBOutlet weak var safetySwitch: UISwitch!
     
+    static var buffer_samplesize : String = ""
+    static var buffer_cohortsize : String = ""
+    static var buffer_target : String = ""
     var extrasafe_value : Bool = false
     var earlystop_value : Int? = nil
     var fi1_value : Double? = nil
@@ -23,7 +26,9 @@ class getboundaryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        samplesizeTextFiled.text! = getboundaryViewController.buffer_samplesize
+        cohortsizeTextField.text! = getboundaryViewController.buffer_cohortsize
+        targetTextField.text! = getboundaryViewController.buffer_target
         // Do any additional setup after loading the view.
     }
     @IBAction func gobuttontapped(_ sender: Any) {
@@ -232,54 +237,60 @@ class getboundaryViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let  DestViewController : BoundaryResultController = segue.destination as? BoundaryResultController else
+        guard let DestViewController : AdvancedViewController = segue.destination as? AdvancedViewController else{
+        
+            guard let  DestViewController : BoundaryResultController = segue.destination as? BoundaryResultController else
+            {
+                return
+            }
+            let samplesize = samplesizeTextFiled.text;
+            let cohort = cohortsizeTextField.text;
+            let target = targetTextField.text;
+            func displayMyAlertMessage(userMessage:String)
+            {
+                let myAlert = UIAlertController(title:"Alert",message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
+                let okAction = UIAlertAction(title:"OK",style:UIAlertActionStyle.default,handler:nil);
+                myAlert.addAction(okAction);
+                self.present(myAlert,animated:true,completion:nil);
+            }
+            if ((samplesize?.isEmpty)! || (cohort?.isEmpty)! || (target?.isEmpty)!)
+            {
+                displayMyAlertMessage(userMessage: "All fields are required");
+                return;
+            }
+            let string = NSString(string: target!)
+            if ( string.doubleValue > 0.6 )
+            {
+                displayMyAlertMessage(userMessage: "Error: the target is too high! ");
+                return;
+            }
+            if ( string.doubleValue < 0.05)
+            {
+                displayMyAlertMessage(userMessage: "Error: the target is too low! ");
+                return;
+            }
+        /*if(earlystop_value == nil||fi1_value == nil||fi2_value == nil||offset_value == nil||cutoff_value == nil)
         {
+            let boundaryResult = getBoundary(target: Double(targetTextField.text!)!, ncohort: Int(samplesizeTextFiled.text!)!, cohortsize: Int(cohortsizeTextField.text!)!, extrasafe : extrasafe_value,_print: true)!
+            DestViewController.resultText = boundaryResult.firstHint!
+            DestViewController.resultText2 = boundaryResult.secondHint!
+            DestViewController.firstMatrixContent = boundaryResult.digested
+            DestViewController.secondMatrixContent = boundaryResult.complete
+            DestViewController.thirdMatrixContent = boundaryResult.twoLines
+        }
+        else{*/
+            let boundaryResult = getBoundary(target: Double(targetTextField.text!)!, ncohort: Int(samplesizeTextFiled.text!)!, cohortsize: Int(cohortsizeTextField.text!)!, n_earlystop : earlystop_value ?? 100, p_saf : fi1_value ?? nil, p_tox : fi2_value ?? nil, cutoff_eli : cutoff_value ?? 0.95, extrasafe : extrasafe_value, offset: offset_value ?? 0.05, _print : true)!
+            DestViewController.resultText = boundaryResult.firstHint!
+            DestViewController.resultText2 = boundaryResult.secondHint!
+            DestViewController.firstMatrixContent = boundaryResult.digested
+            DestViewController.secondMatrixContent = boundaryResult.complete
+            DestViewController.thirdMatrixContent = boundaryResult.twoLines
             return
         }
-        let samplesize = samplesizeTextFiled.text;
-        let cohort = cohortsizeTextField.text;
-        let target = targetTextField.text;
-        func displayMyAlertMessage(userMessage:String)
-        {
-            let myAlert = UIAlertController(title:"Alert",message: userMessage, preferredStyle: UIAlertControllerStyle.alert);
-            let okAction = UIAlertAction(title:"OK",style:UIAlertActionStyle.default,handler:nil);
-            myAlert.addAction(okAction);
-            self.present(myAlert,animated:true,completion:nil);
-        }
-        if ((samplesize?.isEmpty)! || (cohort?.isEmpty)! || (target?.isEmpty)!)
-        {
-            displayMyAlertMessage(userMessage: "All fields are required");
-            return;
-        }
-        let string = NSString(string: target!)
-        if ( string.doubleValue > 0.6 )
-        {
-            displayMyAlertMessage(userMessage: "Error: the target is too high! ");
-            return;
-        }
-        if ( string.doubleValue < 0.05)
-        {
-            displayMyAlertMessage(userMessage: "Error: the target is too low! ");
-            return;
-        }
-        if(earlystop_value == nil||fi1_value == nil||fi2_value == nil||offset_value == nil||cutoff_value == nil)
-        {
-            let boundaryResult = getBoundary(target: Double(targetTextField.text!)!, ncohort: Int(samplesizeTextFiled.text!)!, cohortsize: Int(cohortsizeTextField.text!)!, _print: true)!
-            DestViewController.resultText = boundaryResult.firstHint!
-            DestViewController.resultText2 = boundaryResult.secondHint!
-            DestViewController.firstMatrixContent = boundaryResult.digested
-            DestViewController.secondMatrixContent = boundaryResult.complete
-            DestViewController.thirdMatrixContent = boundaryResult.twoLines
-        }
-        else{
-            let boundaryResult = getBoundary(target: Double(targetTextField.text!)!, ncohort: Int(samplesizeTextFiled.text!)!, cohortsize: Int(cohortsizeTextField.text!)!, n_earlystop : earlystop_value!, p_saf : fi1_value!, p_tox : fi2_value!, cutoff_eli : cutoff_value!, extrasafe : extrasafe_value, offset : offset_value!, _print : true)!
-            
-            DestViewController.resultText = boundaryResult.firstHint!
-            DestViewController.resultText2 = boundaryResult.secondHint!
-            DestViewController.firstMatrixContent = boundaryResult.digested
-            DestViewController.secondMatrixContent = boundaryResult.complete
-            DestViewController.thirdMatrixContent = boundaryResult.twoLines
-        }
+        getboundaryViewController.buffer_target = targetTextField.text ?? ""
+        getboundaryViewController.buffer_cohortsize = cohortsizeTextField.text ?? ""
+        getboundaryViewController.buffer_samplesize = samplesizeTextFiled.text ?? ""
+        
         
     }
 
